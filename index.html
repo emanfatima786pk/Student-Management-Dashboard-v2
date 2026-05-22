@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>🎓 Dashboard</h2>
+    <ul>
+        <li><i class="fa fa-home"></i> Home</li>
+        <li><i class="fa fa-user"></i> Students</li>
+        <li><i class="fa fa-book"></i> Courses</li>
+        <li><i class="fa fa-chart-line"></i> Analytics</li>
+    </ul>
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>Student Management</h1>
+<div id="clock"></div>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Students</h3>
+<p id="total">0</p>
+</div>
+
+<div class="card">
+<h3>Unique Courses</h3>
+<p id="courses">0</p>
+</div>
+
+<div class="card">
+<h3>Average Age</h3>
+<p id="avg">0</p>
+</div>
+
+</div>
+
+<div class="formBox">
+
+<h2>Add Student</h2>
+
+<input type="text" id="name" placeholder="Student Name">
+
+<input type="number" id="age" placeholder="Age">
+
+<input type="text" id="course" placeholder="Course">
+
+<button onclick="addStudent()">Add Student</button>
+
+</div>
+
+<div class="timerBox">
+
+<h2>Study Timer</h2>
+
+<h1 id="timer">00:00</h1>
+
+<button onclick="startTimer()">Start</button>
+
+<button onclick="stopTimer()">Pause</button>
+
+</div>
+
+<h2>Student Records</h2>
+
+<input id="search"
+type="text"
+placeholder="Search student..."
+onkeyup="searchStudent()">
+
+<div id="output"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
